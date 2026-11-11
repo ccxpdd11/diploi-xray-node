@@ -1,0 +1,20 @@
+# Diploi project definition (docs.diploi.com/reference/diploi-yaml).
+# - diploiVersion is always v1.0.
+# - Single Node.js component at the repo root (folder: /), so Diploi uses the
+#   files already in the repo (Dockerfile, package.json, server.js) instead of
+#   generating starter files.
+# - hosts.port 8080 MUST match the port xray listens on. entrypoint.sh
+#   defaults PORT to 8080; set PORT=8080 in the deployment's Environment tab
+#   so the two cannot drift. Verify with `diploi describe xray` at deploy time.
+# - UUID is NOT in this file: set it in the deployment's Environment tab
+#   (Secret), never in the repo.
+diploiVersion: v1.0
+components:
+  - name: Node.js
+    identifier: xray
+    folder: /
+    package: https://github.com/diploi/component-nodejs#v24.14.0
+    hosts:
+      - identifier: xray
+        name: Xray
+        port: 8080

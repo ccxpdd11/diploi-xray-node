@@ -1,0 +1,14 @@
+{
+    "description": "xray VLESS+WS/XHTTP runtime wrapper (free-tier PaaS). No credentials in repo.",
+    "engines": {
+        "node": ">=18"
+    },
+    "main": "server.js",
+    "name": "xray-diploi",
+    "private": true,
+    "scripts": {
+        "build": "echo 'no build step: xray binary is fetched at runtime by entrypoint.sh'",
+        "start": "node server.js"
+    },
+    "version": "1.0.0"
+}
