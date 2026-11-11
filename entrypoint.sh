@@ -14,7 +14,7 @@ UUID="${UUID:-}"
 WS_PATH="${WS_PATH:-/ws}"
 XHTTP_PATH="${XHTTP_PATH:-/xhttp}"
 TRANSPORT="${TRANSPORT:-ws}"
-XRAY_VERSION="${XRAY_VERSION:-v26.11.9}"
+XRAY_VERSION="${XRAY_VERSION:-v26.10.31}"
 if [ -z "$UUID" ]; then echo "ERROR: UUID env var is required (set it in the platform dashboard, never in a file)" >&2; exit 1; fi
 case "$UUID" in
   ????????-????-????-????-????????????) ;;

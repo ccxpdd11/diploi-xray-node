@@ -6,7 +6,7 @@
 # honoured; if the Node.js component's own Dockerfile is used instead, the
 # build runs `npm install` + `npm run build` and the container runs
 # `npm start` -> server.js -> entrypoint.sh. Both paths end at entrypoint.sh.
-FROM ghcr.io/xtls/xray-core:v26.11.9 AS xray
+FROM ghcr.io/xtls/xray-core:v26.10.31 AS xray
 FROM alpine:3.20
 RUN apk add --no-cache ca-certificates curl unzip
 COPY --from=xray /usr/local/bin/xray /usr/local/bin/xray
